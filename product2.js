@@ -1,37 +1,37 @@
-// let listProduct = [{
-//     name: "IPhone 5",
-//     price: "3000",
-//     image: "img/anh1.jpg",
-//     id: 1,
-// },
-// {
-//     name: "IPhone 6",
-//     price: "3000",
-//     image: "img/anh2.jpg",
-//     id: 2,
-// },
-// {
-//     name: "IPhone  7",
-//     price: "3000",
-//     image: "img/anh3.jpg",
-//     id: 3,
-// },
-// {
-//     name: "Samsung 8",
-//     price: "3000",
-//     image: "img/anh4.jpg",
-//     id: 4,
-// },
-// {
-//     name: "IPhone  9",
-//     price: "3000",
-//     image: "img/anh5.jpg",
-//     id: 5,
-// },
-// ]
-// // Lưu trên local Storage
-// localStorage.setItem("listProduct",JSON.stringify(listProduct));
-let listProduct=JSON.parse(localStorage.getItem("listProduct"));
+let listProduct = [{
+    name: "IPhone 5",
+    price: "3000",
+    image: "img/anh1.jpg",
+    id: 1,
+},
+{
+    name: "IPhone 6",
+    price: "3000",
+    image: "img/anh2.jpg",
+    id: 2,
+},
+{
+    name: "IPhone  7",
+    price: "3000",
+    image: "img/anh3.jpg",
+    id: 3,
+},
+{
+    name: "Samsung 8",
+    price: "3000",
+    image: "img/anh4.jpg",
+    id: 4,
+},
+{
+    name: "IPhone  9",
+    price: "3000",
+    image: "img/anh5.jpg",
+    id: 5,
+},
+]
+// Lưu trên local Storage
+localStorage.setItem("listProduct",JSON.stringify(listProduct));
+let list=JSON.parse(localStorage.getItem("listProduct"));
 
 
 function renderProducts(all){
@@ -53,7 +53,7 @@ for (let i = 0; i < all.length; i++) {
 document.getElementById("showProduct").innerHTML = data;
 }
 
-renderProducts(listProduct);
+renderProducts(list);
 
 function addToCart(id) {
     let listProducts = JSON.parse(localStorage.getItem("listProduct"));
@@ -110,8 +110,8 @@ function searchProduct() {
     // console.log("đã bắt được sự kiện");
     let valueInput= document.getElementById("search").value.toLowerCase();
     // console.log("valueinput");
-    for (let i = 0; i < listProduct.length; i++) {
-        if (listProduct[i].name.toLowerCase().indexOf(valueInput) !=-1) {
+    for (let i = 0; i < list.length; i++) {
+        if (list[i].name.toLowerCase().indexOf(valueInput) !=-1) {
             console.log("same");
             // data+=`
             // <div class="product">
@@ -122,7 +122,7 @@ function searchProduct() {
             // <i onclick="addToCart(${listProduct[i].id})" class="fa-solid fa-cart-shopping"></i>   
             // </div>
             // `
-            listRender.push(listProduct[i]);
+            listRender.push(list[i]);
             console.log(listRender);
          
         } 
