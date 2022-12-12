@@ -1,36 +1,36 @@
-// let listProduct = [{
-//     name: "IPhone 5",
-//     price: "3000",
-//     image: "img/anh1.jpg",
-//     id: 1,
-// },
-// {
-//     name: "IPhone 6",
-//     price: "3000",
-//     image: "img/anh2.jpg",
-//     id: 2,
-// },
-// {
-//     name: "IPhone  7",
-//     price: "3000",
-//     image: "img/anh3.jpg",
-//     id: 3,
-// },
-// {
-//     name: "Samsung 8",
-//     price: "3000",
-//     image: "img/anh4.jpg",
-//     id: 4,
-// },
-// {
-//     name: "IPhone  9",
-//     price: "3000",
-//     image: "img/anh5.jpg",
-//     id: 5,
-// },
-// ]
-// // Lưu trên local Storage
-// localStorage.setItem("listProduct",JSON.stringify(listProduct));
+let listProduct = [{
+    name: "IPhone 5",
+    price: "3000",
+    image: "img/anh1.jpg",
+    id: 1,
+},
+{
+    name: "IPhone 6",
+    price: "3000",
+    image: "img/anh2.jpg",
+    id: 2,
+},
+{
+    name: "IPhone  7",
+    price: "3000",
+    image: "img/anh3.jpg",
+    id: 3,
+},
+{
+    name: "Samsung 8",
+    price: "3000",
+    image: "img/anh4.jpg",
+    id: 4,
+},
+{
+    name: "IPhone  9",
+    price: "3000",
+    image: "img/anh5.jpg",
+    id: 5,
+},
+]
+// Lưu trên local Storage
+localStorage.setItem("listProduct",JSON.stringify(listProduct));
 let list=JSON.parse(localStorage.getItem("listProduct"));
 
 
